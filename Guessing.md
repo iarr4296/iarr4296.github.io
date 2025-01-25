@@ -4,9 +4,9 @@
 flowchart TD
 Start([Start]) --> RandomNumber{Generate Random Number 1-20};
     RandomNumber --> UserGuess[Get User Guess];
-    UserGuess --> CheckGuess{Is Guess Correct?};
+    UserGuess --> CheckGuess{Is user Correct?};
     
-    CheckGuess -- Yes --> Compare{Is Guess Correct?};
+    CheckGuess -- Yes --> Compare{Is number correct?};
     CheckGuess -- No --> IncorrectGUess[Display Error Message]
     IncorrectGuess --> UserGuess
     
