@@ -1,10 +1,20 @@
-## How to deploy
+## Number Guessing Game
 
 ```mermaid
 flowchart TD
-    A[Deploy to production] --> B{Is it Friday?};
-    B -- Yes --> C[Don not deploy!];
-    B -- No --> D[Run deploy.sh to deploy!];
-    C ----> E[Enjoy your weekend!];
-    D ----> E[Enjoy your weekend!];
+Start([Start]) --> RandomNumber{Generate Random Number 1-20};
+    RandomNumber --> UserGuess[Get User Guess];
+    UserGuess --> CheckGuess{Is Guess Correct?};
+    
+    CheckGuess -- Yes --> Compare{Is Guess Correct?};
+    CheckGuess -- No --> IncorrectGUess[Display Error Message]
+    IncorrectGuess --> UserGuess
+    
+    Compare -- Correct --> CorrectGuess([Correct!]);
+    Compare -- TooHigh --> HighGuess([Too High!]);
+    Compare -- TooLow --> LowGuess([Too Low!]);
+    
+    HighGuess --> UserGuess
+    LowGuess --> UserGuess
+    CorrectGuess --> End([End])
 ```
