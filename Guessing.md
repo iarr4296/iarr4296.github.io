@@ -18,3 +18,8 @@ Start([Start]) --> RandomNumber{Generate Random Number 1-20};
     LowGuess --> UserGuess
     CorrectGuess --> End([End])
 ```
+The game generates a random number.
+The user then inputs their guess.
+The game gives the user answers based on their guess.
+
+
