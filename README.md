@@ -8,4 +8,3 @@
  * [Flight Tracker](https://www.flightradar24.com/G20926) - This one is cool because you can see live feed of any flying vehicles.
  * [Pinterest](https://www.pinterest.com/) - I like Pinterest because it allows me to make inspiration boards for my creative ideas.
 
-git checkout -b lesson7
